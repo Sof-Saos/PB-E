@@ -54,19 +54,16 @@ public class Main {
     }
 
     public static void agregarEstudiante(Universidad universidad) {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Ingrese la cantidad de estudiantes que desea agregar:");
-        int cantidadEstudiantes = scanner.nextInt();
-        scanner.nextLine();
+        int cantidadEstudiantes = sc.nextInt();
+        sc.nextLine();
         for (int i = 0; i < cantidadEstudiantes; i++) {
             System.out.println("Ingrese el nombre del estudiante:");
-            String nombre = scanner.nextLine();
+            String nombre = sc.nextLine();
             System.out.println("Ingrese la edad del estudiante:");
-            int edad = scanner.nextInt();
-            scanner.nextLine();
+            int edad = sc.nextInt();
             System.out.println("Ingrese el número de estudiante:");
-            int numeroEstudiante = scanner.nextInt();
-            scanner.nextLine();
+            int numeroEstudiante = sc.nextInt();
             Estudiante estudiante = new Estudiante(nombre, edad, numeroEstudiante);
             universidad.agregarEstudiantes(estudiante);
             System.out.println("Estudiante agregado con éxito.");
